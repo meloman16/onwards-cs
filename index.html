@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#111111">
+<meta name="description" content="ONWARDS — клан Counter-Strike 1.6. Команда, тактика, победа.">
+<title>ONWARDS — CS 1.6 Clan</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#home"><span class="brand-mark">O</span><span>ONWARDS<small>CS 1.6 CLAN</small></span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">☰</button>
+  <nav id="nav"><a href="#about">О клане</a><a href="#roster">Состав</a><a href="#join">Вступить</a><a href="#contacts">Контакты</a></nav>
+  <a class="top-cta" href="#join">ПОДАТЬ ЗАЯВКУ <span>↗</span></a>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="hero-image"></div><div class="hero-shade"></div>
+  <div class="hero-content">
+    <div class="eyebrow"><span class="red-dot"></span> COUNTER-STRIKE 1.6 • CLAN</div>
+    <h1>WE MOVE<br><span>ONWARDS.</span></h1>
+    <p>Не просто игра. Команда, дисциплина и путь к победе.</p>
+    <div class="hero-actions"><a class="btn primary" href="#join">ВСТУПИТЬ В КЛАН <b>↗</b></a><a class="btn ghost" href="#roster">НАШ СОСТАВ</a></div>
+    <div class="hero-stats"><div><strong>1.6</strong><span>LEGENDARY CS</span></div><div><strong>5v5</strong><span>TEAM FORMAT</span></div><div><strong>∞</strong><span>ОБЩИЙ ПУТЬ</span></div></div>
+  </div>
+  <div class="hero-tag">TACTICS <i>•</i> UNITY <i>•</i> VICTORY</div>
+</section>
+<section class="ticker"><div>ONWARDS <span>✦</span> COUNTER-STRIKE 1.6 <span>✦</span> TEAMPLAY FIRST <span>✦</span> ONWARDS <span>✦</span> COUNTER-STRIKE 1.6 <span>✦</span></div></section>
+<section class="section about" id="about">
+ <div class="section-label">01 / WHO WE ARE</div><div class="section-grid"><div><h2>НАША ЦЕЛЬ —<br><em>ПОБЕДА.</em></h2></div><div class="about-copy"><p>ONWARDS — клан Counter-Strike 1.6 для тех, кто ценит командную игру, уважение и сильный характер. Мы играем вместе, тренируемся вместе и двигаемся только вперед.</p><div class="values"><div><span>01</span><b>TEAMPLAY</b><small>Действуем как единое целое.</small></div><div><span>02</span><b>DISCIPLINE</b><small>Тактика важнее хаоса.</small></div><div><span>03</span><b>RESPECT</b><small>Уважение к каждому игроку.</small></div></div></div></div>
+</section>
+<section class="section roster" id="roster"><div class="section-label">02 / THE SQUAD</div><div class="section-heading"><h2>НАШ <em>СОСТАВ</em></h2><button class="small-btn" id="addPlayer">＋ ДОБАВИТЬ ИГРОКА</button></div>
+<div class="roster-grid" id="rosterGrid"></div><p class="hint">Состав можно редактировать прямо на сайте. Изменения сохраняются в этом браузере.</p></section>
+<section class="join" id="join"><div class="join-back">ONWARDS</div><div class="join-inner"><div class="section-label">03 / JOIN THE CLAN</div><h2>ГОТОВ ДВИГАТЬСЯ<br><em>ВПЕРЕД?</em></h2><p>Заполни заявку. Мы свяжемся с тобой и пригласим на тестовую игру.</p>
+<form id="joinForm"><div class="form-row"><label>ТВОЙ НИК<input name="nickname" placeholder="Например, d.Ogneven" required maxlength="32"></label><label>ВОЗРАСТ<input name="age" type="number" placeholder="Возраст" min="10" max="99" required></label></div><div class="form-row"><label>ОПЫТ В CS 1.6<select name="experience" required><option value="">Выбери опыт</option><option>Новичок</option><option>Играю давно</option><option>Опытный игрок</option><option>Участвовал в турнирах</option></select></label><label>КОНТАКТ VK / DISCORD<input name="contact" placeholder="@username или ссылка" required maxlength="100"></label></div><label>О СЕБЕ<textarea name="about" placeholder="Роль, любимые карты, время игры..." rows="3" maxlength="500"></textarea></label><button class="btn primary submit" type="submit">ОТПРАВИТЬ ЗАЯВКУ <b>↗</b></button><div id="formMessage" role="status"></div></form>
+<div class="applications" id="applications"><button class="small-btn" id="showApplications">МОИ ЗАЯВКИ (НА ЭТОМ УСТРОЙСТВЕ)</button><div id="applicationList"></div></div>
+</div></section>
+<section class="section contacts" id="contacts"><div class="section-label">04 / CONNECT</div><div class="contact-grid"><div><h2>НА СВЯЗИ.<br><em>В ИГРЕ.</em></h2><p>Заходи в нашу команду и стань частью ONWARDS.</p></div><div class="contact-box"><div><span>CLAN</span><b>ONWARDS</b></div><div><span>GAME</span><b>COUNTER-STRIKE 1.6</b></div><div><span>VK CONTACT</span><b>@d.Ogneven</b></div><button class="small-btn" id="copyContact">КОПИРОВАТЬ VK-КОНТАКТ ↗</button></div></div></section>
+</main><footer><a class="brand" href="#home"><span class="brand-mark">O</span><span>ONWARDS<small>CS 1.6 CLAN</small></span></a><span>© <span id="year"></span> ONWARDS. ДВИЖЕМСЯ ВПЕРЕД.</span><a href="#home">НАВЕРХ ↑</a></footer>
+<dialog id="playerDialog"><form id="playerForm" method="dialog"><div class="dialog-head"><h3>НОВЫЙ ИГРОК</h3><button type="button" id="closeDialog" class="close">×</button></div><label>НИК<input name="name" required maxlength="32" placeholder="Игровой ник"></label><label>РОЛЬ<select name="role"><option>Rifler</option><option>AWP</option><option>Entry Fragger</option><option>Support</option><option>IGL</option></select></label><label>НОМЕР<input name="number" type="number" min="1" max="99" value="06"></label><button class="btn primary submit" type="submit">ДОБАВИТЬ</button></form></dialog>
+<script src="script.js"></script>
+</body></html>
